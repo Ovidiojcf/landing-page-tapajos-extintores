@@ -5,28 +5,40 @@ import { useEffect, useState } from "react";
 const slides = [
   {
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Wuzhi89VQ3Vy0a90utbAC78WsViH7A.png",
-    alt: "Interior da loja Tapajós Extintores com equipamentos de segurança",
-    eyebrow: "Pronta resposta",
-    title: "Proteção preparada para o que importa.",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tapajos_extintores_equipe-PJjxYzTqPUXT9fY0I6fHD5sAbzEiiq.jpg",
+    alt: "Equipe Tapajós Extintores reunida durante treinamento prático",
+    eyebrow: "Prevenção na prática",
+    title: (
+      <>
+        Proteção <span className="text-brand-primary">preparada</span> para o que importa.
+      </>
+    ),
     description:
       "Extintores, recargas e soluções contra incêndio para empresas, embarcações e residências em Santarém.",
   },
   {
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Wuzhi89VQ3Vy0a90utbAC78WsViH7A.png",
-    alt: "Interior da loja Tapajós Extintores com equipamentos de segurança",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tapajos_extintores_fachada-Dj7EPhlXfa9CXqC4EZwzopuXp9vDid.png",
+    alt: "Fachada da loja Tapajós Extintores em Santarém",
     eyebrow: "Segurança local",
-    title: "Equipamentos certos para cada risco.",
+    title: (
+      <>
+        Equipamentos <span className="text-brand-accent">certos</span> para cada risco.
+      </>
+    ),
     description:
       "Conte com orientação especializada para proteger pessoas, patrimônios e operações todos os dias.",
   },
   {
     image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Wuzhi89VQ3Vy0a90utbAC78WsViH7A.png",
-    alt: "Interior da loja Tapajós Extintores com equipamentos de segurança",
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tapajos_extintores_equipe-PJjxYzTqPUXT9fY0I6fHD5sAbzEiiq.jpg",
+    alt: "Equipe Tapajós Extintores reunida durante treinamento prático",
     eyebrow: "Confiança que permanece",
-    title: "Sua empresa segura para seguir em frente.",
+    title: (
+      <>
+        Sua empresa <span className="text-brand-primary">segura</span> para seguir em frente.
+      </>
+    ),
     description:
       "Cuidamos da manutenção e conformidade dos seus equipamentos com agilidade e atenção.",
   },
@@ -107,7 +119,7 @@ export default function Home() {
           <span className="mr-2 text-xs font-semibold text-white/70">{String(activeSlide + 1).padStart(2, "0")} / 03</span>
           {slides.map((item, index) => (
             <button
-              key={item.title}
+              key={`slide-control-${index}`}
               type="button"
               aria-label={`Ir para o destaque ${index + 1}`}
               aria-current={index === activeSlide}
