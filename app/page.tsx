@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const slides = [
   {
@@ -76,9 +77,11 @@ export default function Home() {
             }`}
             aria-hidden={index !== activeSlide}
           >
-            <img
+            <Image
               src={item.image}
               alt={item.alt}
+              fill
+              sizes="100vw"
               className="h-full w-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(8,8,7,.96)_0%,rgba(8,8,7,.72)_38%,rgba(8,8,7,.18)_75%,rgba(8,8,7,.42)_100%)]" />
