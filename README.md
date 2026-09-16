@@ -16,9 +16,13 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `src/app/(site)/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Tailwind CSS v4 conventions
+
+The project uses Tailwind CSS v4 with the CSS-first configuration in `src/app/globals.css`. Prefer canonical utility classes from the v4 theme scale when IntelliSense suggests them, such as `sm:h-18` and `sm:w-18` instead of equivalent arbitrary values like `sm:h-[4.5rem]` and `sm:w-[4.5rem]`. Use arbitrary values only when the design requires a value that is not available in the theme scale.
 
 ## Learn More
 
